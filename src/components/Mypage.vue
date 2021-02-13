@@ -25,8 +25,6 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.mypage-section{
-}
 .user-info{
     border-bottom: 1px solid black;
 }
