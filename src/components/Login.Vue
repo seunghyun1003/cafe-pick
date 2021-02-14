@@ -1,29 +1,47 @@
 <template>
-    <div class="login-form">
-        <form @submit="onSubmit">
-            <input placeholder="Enter your ID" v-model="uid">
-            <input placeholder="Enter your password" v-model="password">
-            <button type="submit">Login</button>
-        </form>
-    </div>
+<v-container id="login-container">
+    <v-card>
+        <v-toolbar flat>
+            <v-toolbar-title>Login</v-toolbar-title>
+        </v-toolbar>
+        <div class="login-form">
+            <v-text-field flat class="login-textfiled"
+                v-model="email"
+                label="Email"
+                placeholder="email 입력하세요."
+                solo
+            ></v-text-field>
+            <v-text-field flat class="login-textfiled"
+                v-model="password"
+                label="PassWord"
+                type="password"
+                placeholder="password를 입력하세요."
+                solo
+            ></v-text-field>
+        </div>
+    </v-card>
+</v-container>
 </template>
 
 <script>
 export default {
     name: 'Login',
     data: () => ({
-        uid: '',
+        email: '',
         password: ''
-    }),
-    methods: {
-        onSubmit () {
-            console.log(this.uid)
-            console.log(this.password)
-        }
-    }
+    })
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#login-container{
+    max-width: 450px;
+    width:100%;
+}
+.login-textfiled{
+    border: 1px solid black;
+    border-radius: 0.25em;
+    margin: 1em;
+}
 </style>
 

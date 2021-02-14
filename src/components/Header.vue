@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="logo">
-            <a href="#">Logo</a>
+            <button><router-link to="/">Logo</router-link></button>
         </div>
         <div class="nav">
             <button><router-link to="/write">write</router-link></button>
@@ -19,6 +19,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+    padding: 1em 2em;
 }
 .logo {
     font-size: x-large;
@@ -32,11 +33,11 @@
 
 .nav {
     display: flex;
-    padding: 1em 20px;
 }
 .nav button{
     border: none;
     background-color: inherit;
+    padding: 0 1em;
 }
 .nav a{
     text-decoration: none;

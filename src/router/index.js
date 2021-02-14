@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from '@/App'
+import PostList from '@/components/PostList'
 import Login from '@/components/Login'
 import Write from '@/components/Write'
 import Mypage from '@/components/Mypage'
@@ -11,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'App',
-      component: App
+      name: 'PostList',
+      component: PostList
     },
     {
       path: '/login',
