@@ -18,6 +18,14 @@
                 placeholder="password를 입력하세요."
                 solo
             ></v-text-field>
+            <v-btn
+            @click="login()"
+            rounded
+            color="primary"
+            dark
+            >
+            로그인
+            </v-btn>
         </div>
     </v-card>
 </v-container>
@@ -28,8 +36,16 @@ export default {
     name: 'Login',
     data: () => ({
         email: '',
-        password: ''
-    })
+        password: '',
+        allUsers:[
+            {id:1, name:'admin',email:"admin@admin.com",password:"1234"}
+        ]
+    }),
+    methods: {
+        login(){
+            console.log(this.email, this.password)
+        }
+    },
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
