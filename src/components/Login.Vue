@@ -1,8 +1,8 @@
 <template>
 <v-container id="login-container">
-    <v-card>
+    <v-card flat>
         <v-toolbar flat>
-            <v-toolbar-title>Login</v-toolbar-title>
+            <v-toolbar-title style="text-align: center;">Login</v-toolbar-title>
         </v-toolbar>
         <div class="login-form">
             <v-text-field flat class="login-textfiled"
@@ -27,6 +27,8 @@
             로그인
             </v-btn>
         </div>
+            <div><router-link to="/findpw">비밀번호 찾기</router-link></div>
+            <div><router-link to="/signup">signup</router-link></div>
     </v-card>
 </v-container>
 </template>
@@ -43,7 +45,7 @@ export default {
     }),
     methods: {
         login(){
-            console.log(this.email, this.password)
+            console.log("로그인 " + this.email, this.password)
         }
     },
 }

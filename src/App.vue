@@ -1,9 +1,7 @@
 <template>
     <div id="app">
         <Header></Header>
-        <router-view 
-            style="background-color: rgb(235, 233, 233);
-            padding: 2em;"/>
+        <router-view/>
     </div>
 </template>
 

@@ -4,8 +4,10 @@
             <button><router-link to="/">Logo</router-link></button>
         </div>
         <div class="nav">
+            <button v-if="user"><router-link to="/login">logout</router-link></button>
+            <button v-else><router-link to="/login">login</router-link></button>
             <button><router-link to="/write">write</router-link></button>
-            <button><router-link to="/login">login</router-link></button>
+            <button><router-link to="/search">search</router-link></button>
             <button><router-link to="/mypage">mypage</router-link></button>
         </div>
     </div>
