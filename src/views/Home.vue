@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div id="home">
         <Map></Map>
-        <div>게시물 리스트 뷰</div>
+        <div class="postlist">게시물 리스트 뷰</div>
     </div>
 </template>
 
@@ -16,5 +16,11 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#home{
+  display:flex;
+}
+.postlist{
+  flex-basis: 50%;
+  }
 </style>
 
