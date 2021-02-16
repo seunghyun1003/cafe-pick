@@ -38,10 +38,7 @@ export default {
     name: 'Login',
     data: () => ({
         email: '',
-        password: '',
-        allUsers:[
-            {id:1, name:'admin',email:"admin@admin.com",password:"1234"}
-        ]
+        password: ''
     }),
     methods: {
         login(){
@@ -50,7 +47,7 @@ export default {
     },
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 #login-container{
     max-width: 450px;
@@ -62,4 +59,3 @@ export default {
     margin: 1em;
 }
 </style>
-

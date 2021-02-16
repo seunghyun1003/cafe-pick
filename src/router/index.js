@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from '@/App'
-import PostList from '@/components/PostList'
-import Login from '@/components/Login'
-import Write from '@/components/Write'
-import Mypage from '@/components/Mypage'
-import Search from '@/components/Search'
-import Signup from '@/components/Signup'
-import FindPw from '@/components/FindPw'
+import Home from '@/views/Home'
+import Login from '@/views/Login'
+import Write from '@/views/Write'
+import Mypage from '@/views/Mypage'
+import Search from '@/views/Search'
+import Signup from '@/views/Signup'
+import FindPw from '@/views/FindPw'
 
 Vue.use(Router)
 
@@ -15,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'PostList',
-      component: PostList
+      name: 'Home',
+      component: Home
     },
     {
       path: '/login',
