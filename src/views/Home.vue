@@ -1,7 +1,6 @@
 <template>
     <div id="home">
         <Map></Map>
-        <div class="postlist">게시물 리스트 뷰</div>
     </div>
 </template>
 
@@ -19,8 +18,5 @@ export default {
 #home{
   display:flex;
 }
-.postlist{
-  flex-basis: 50%;
-  }
 </style>
 
