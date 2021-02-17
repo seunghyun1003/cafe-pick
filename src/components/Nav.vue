@@ -1,27 +1,21 @@
 <template>
     <div class="nav">
         <v-tabs
-            v-model="tabs"
-            fixed-tabs
+            v-model="tab"
             dark
-            background-color="teal darken-3"
+            icons-and-text
         >
-            <v-tab router-link to="/write"
-                href="#mobile-tabs-5-1"
-                class="primary--text"
-            >
+            <v-tabs-slider></v-tabs-slider>
+            <v-tab router-link to="/write">
+                리뷰 작성
                 <v-icon>{{ mdiPencil }}</v-icon>
             </v-tab>
-            <v-tab router-link to="/search"
-                href="#mobile-tabs-5-1"
-                class="primary--text"
-            >
+            <v-tab router-link to="/search">
+                검색
                 <v-icon>{{ mdiMapSearchOutline }}</v-icon>
             </v-tab>
-            <v-tab router-link to="/mypage"
-                href="#mobile-tabs-5-1"
-                class="primary--text"
-            >
+            <v-tab router-link to="/mypage">
+                마이페이지
                 <v-icon>{{ mdiAccount }}</v-icon>
             </v-tab>
         </v-tabs>
@@ -49,12 +43,8 @@ export default {
     left:0;
     width: 100%;
 }
-
 .nav a{
     width: 100%;
-}
-v-tabs{
-    height: 3rem;
 }
 </style>
 

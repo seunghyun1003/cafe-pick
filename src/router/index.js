@@ -4,6 +4,7 @@ import App from '@/App'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import Write from '@/views/Write'
+import Detail from '@/views/Detail'
 import Mypage from '@/views/Mypage'
 import Search from '@/views/Search'
 import Signup from '@/views/Signup'
@@ -24,9 +25,14 @@ export default new Router({
       component: Login
     },
     {
-      path: '/write',
+      path: '/write/:contentId?',
       name: 'Write',
       component: Write
+    },
+    {
+      path: '/detail/:contentId',
+      name: 'Detail',
+      component: Detail
     },
     {
       path: '/mypage',
