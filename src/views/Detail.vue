@@ -3,7 +3,6 @@
         <div>
             <li>{{ data.cafe_name }}</li>
             <li>{{ data.cafe_location }}</li>
-            <li>{{ data.writer }}</li>
             <li>{{ data.content }}</li>
         </div>
         <div>

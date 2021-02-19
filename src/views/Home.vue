@@ -1,11 +1,12 @@
 <template>
     <div id="home">
-        <Map></Map>
+        <div class="logo">
+            <button><router-link to="/">CafePick</router-link></button>
+        </div>
         <div class="review-list">
             <div class="review-item" :key="index" v-for="(value, index) in data" @click="detailshow(index)">
               <li>{{ value.cafe_name }}</li>
               <li>{{ value.cafe_location }}</li>
-              <li>{{ value.writer }}</li>
               <li>{{ value.content }}</li>
             </div>
         </div>
@@ -13,13 +14,9 @@
 </template>
 
 <script>
-import Map from "@/components/Map.vue";
 import data from "@/data";
 
 export default {
-    components: {
-      'Map': Map
-    },
     data() {
         return {
           data : data
@@ -40,8 +37,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#home{
-  display:flex;
+.logo {
+    font-size: x-large;
+    padding: 0.5em 0;
+    line-height: 3rem;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
 }
 .review-item{
   border: 1px solid gray;

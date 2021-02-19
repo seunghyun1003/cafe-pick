@@ -17,14 +17,19 @@
                 </v-btn>
             </v-row>
         </div>
+        <Map></Map>
     </div>
 </template>
 
 <script>
+import Map from "@/components/Map.vue";
 export default {
     data: () => ({
         searchkeyword: ''
     }),
+    components: {
+        'Map': Map
+    },
     mounted() {
         if (window.kakao && window.kakao.maps) {
             this.initMap();
@@ -77,17 +82,15 @@ export default {
 </script>
 <style>
 #search{
-    margin: 0 20%;
 }
 #search-form{
-}
-.v-icon.v-icon{
-    color: rgb(76, 76, 193);
+    position: fixed;
+    top: 300px;
+    width: 100%;
+    max-width: 600px;
+    z-index: 10;
 }
 .v-text-field__slot,.v-text-field__slot > label{
     padding: 0 1em;
-}
-.submitbtn{
-    height: 100px;
 }
 </style>

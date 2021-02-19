@@ -1,37 +1,40 @@
-<template>
+<template v-slot:extension>
     <div class="nav">
         <v-tabs
-            v-model="tab"
-            dark
-            icons-and-text
+            v-model="tabs"
         >
             <v-tabs-slider></v-tabs-slider>
-            <v-tab router-link to="/write">
-                리뷰 작성
-                <v-icon>{{ mdiPencil }}</v-icon>
+            <v-tab
+                router-link to="/"
+            >
+                <v-icon>mdi-home</v-icon>
             </v-tab>
-            <v-tab router-link to="/search">
-                검색
-                <v-icon>{{ mdiMapSearchOutline }}</v-icon>
+            <v-tab
+                router-link to="/write"
+            >
+                <v-icon>mdi-pencil</v-icon>
             </v-tab>
-            <v-tab router-link to="/mypage">
-                마이페이지
-                <v-icon>{{ mdiAccount }}</v-icon>
+            <v-tab
+                router-link to="/search"
+            >
+                <v-icon>mdi-map-search-outline</v-icon>
+            </v-tab>
+            <v-tab
+                router-link to="/mypage"
+            >
+                <v-icon>mdi-account</v-icon>
             </v-tab>
         </v-tabs>
     </div>
 </template>
 
 <script>
-import {mdiPencil} from '@mdi/js';
-import {mdiAccount} from '@mdi/js';
-import { mdiMapSearchOutline } from '@mdi/js';
-export default {
-    data: () => ({
-        mdiPencil,
-        mdiAccount,
-        mdiMapSearchOutline
-    }),
+export default{
+    data () {
+        return {
+            tabs: '',
+        }
+    }
 }
 </script>
 
@@ -40,11 +43,12 @@ export default {
 .nav {
     position: fixed;
     bottom: 0;
-    left:0;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .nav a{
-    width: 100%;
+    width: 25%;
 }
 </style>
 
