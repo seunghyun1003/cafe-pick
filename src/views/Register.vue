@@ -2,7 +2,7 @@
 <v-container id="signup-container">
     <v-card flat>
         <v-toolbar flat>
-            <v-toolbar-title style="text-align: center;">Sign Up</v-toolbar-title>
+            <v-toolbar-title style="text-align: center;">Register</v-toolbar-title>
         </v-toolbar>
         <div class="signup-form">
             <v-text-field flat class="signup-textfiled"
@@ -49,7 +49,7 @@
 
 <script>
 export default {
-    name: 'signup',
+    name: 'register',
     data: () => ({
         username: '',
         email: '',

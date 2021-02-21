@@ -1,9 +1,13 @@
 <template>
     <div>
+        <div class="title">
+            <h2>{{title}}</h2>
+        </div>
         <div>
             <li>{{ data.cafe_name }}</li>
             <li>{{ data.cafe_location }}</li>
             <li>{{ data.content }}</li>
+            <li><span v-for="n in data.rating">★</span></li>
         </div>
         <div>
             <button @click="reviewupdate()">수정</button>
@@ -20,6 +24,7 @@ export default {
     data(){
         const index = this.$route.params.contentId
         return{
+            title: '상세 페이지',
             data: data[index],
             index: index,
         }
