@@ -7,10 +7,6 @@
             <li>{{ data.cafe_name }}</li>
             <li>{{ data.cafe_location }}</li>
             <li>{{ data.content }}</li>
-<<<<<<< HEAD
-=======
-            <li><span v-for="n in data.rating">★</span></li>
->>>>>>> f3e93e674d60fd5ca38976906172489a11779643
         </div>
         <div>
             <button @click="reviewupdate()">수정</button>
