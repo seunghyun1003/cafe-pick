@@ -8,7 +8,6 @@
               <li>{{ value.cafe_name }}</li>
               <li>{{ value.cafe_location }}</li>
               <li>{{ value.content }}</li>
-              <li><span v-for="n in value.rating">★</span></li>
             </div>
         </div>
     </div>
