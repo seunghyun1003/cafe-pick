@@ -8,6 +8,10 @@
               <li>{{ value.cafe_name }}</li>
               <li>{{ value.cafe_location }}</li>
               <li>{{ value.content }}</li>
+<<<<<<< HEAD
+=======
+              <li><span v-for="n in value.rating">★</span></li>
+>>>>>>> f3e93e674d60fd5ca38976906172489a11779643
             </div>
         </div>
     </div>
